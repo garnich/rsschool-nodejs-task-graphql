@@ -12,8 +12,10 @@ const plugin: FastifyPluginAsyncTypebox = async (fastify) => {
         200: gqlResponseSchema,
       },
     },
-    async handler(req) {
-      return {};
+    async handler(req): Promise<Record<string, string>> {
+      return {
+        test: 'test'
+      };
     },
   });
 };
